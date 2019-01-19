@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fantasy Scoring Charts and Cards with Materialize and High Charts</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+  <link rel='stylesheet' href='https://code.highcharts.com/css/themes/grid-light.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+
+      <nav class="blue darken-2">
+        <div class="container">
+          <div class="nav-wrapper fixed light-blue lighten-1">
+            <a href="index.html" class="brand-logo center ">Nepal Fantasy Football
+              <script type="text/javascript">
+                document.write(new Date().getFullYear());
+              </script></a>
+            <a href="#" data-activates="side-nav" class="button-collapse show-on-med left">
+              <i class="material-icons">menu</i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col s2 m2 ">
+        <ul id="side-nav" class="side-nav fixed">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img class="responsive-img" src="https://i.postimg.cc/2Sf1pZjs/aaron-burden-97663-unsplash_1.jpg">
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#!">
+              <i class="material-icons">dashboard</i>Managers</a>
+          </li>
+          <div class="divider"></div>
+          <li>
+            <div class="row">
+              <div class="col s8">
+                <div class="chip red-text">
+                  <img src="https://i.postimg.cc/bG441fg3/avatar-1.png" alt="Contact Person">
+                  Prasun
+                </div>
+              </div>
+              <div class="col s4">
+                <h6 class="red-text ">
+                  <blockquote>
+                    <i class=" em em-trophy"></i>
+                  </blockquote>
+
+                  <h6>
+              </div>
+            </div>
+          </li>
+          <div class="divider"></div>
+          <li>
+            <div class="row">
+              <div class="col s8">
+                <div class="chip red-text">
+                  <img src="https://i.postimg.cc/7G7dVtQD/avatar-2.png" alt="Contact Person">
+                  Suraj
+                </div>
+              </div>
+              <div class="col s4">
+                <span class="step">2</span>
+              </div>
+            </div>
+          </li>
+
+          <div class="divider"></div>
+          <li>
+            <div class="row">
+              <div class="col s8">
+                <div class="chip responsive-img red-text">
+                  <img src="https://i.postimg.cc/R6cpf6NZ/avatar-10.gif" class="responsive-imge" alt="Contact Person">
+                  Siroo Dai
+                </div>
+              </div>
+              <div class="col s4">
+                <span class="step">3</span>
+              </div>
+            </div>
+          </li>
+
+
+          <div class="divider"></div>
+          <li>
+            <div class="row">
+              <div class="col s12 cyan-text">
+                <a href="ScheduleandStandings.html" name="nflStandings">
+                  Schedule & Standings
+                </a>
+
+              </div>
+
+            </div>
+          </li>
+          <div class="divider"></div>
+        </ul>
+      </div>
+      <!-- left sidebar div end  -->
+      <div class="col s12 m12 l10">
+        <blockquote class="center">
+          <h1 class="red-text">
+            <font style="font-style:italic">2018 Champion</font> <i class=" em em-trophy"></i>
+          </h1>
+          <h2 class="red-text" style="text-transform:capitalize;text-decoration-line: underline;">Prasun </h2>
+
+        </blockquote>
+        <div class="white center">
+          <img id="winner" src="https://i.postimg.cc/bG441fg3/avatar-1.png" alt="" class="center  responsive-img">
+        </div>
+
+
+
+
+
+        <div class="section center">
+          <blockquote class="center">
+            <h1 class="red-text">Finals </h1>
+            <h4 class="red-text">12/22 to 12/24 </h4>
+          </blockquote>
+          <div class="row">
+            <div class="row">
+              <div class="col s12 m12 l12">
+                <div class="card-panel grey lighten-5 z-depth-1">
+
+                  <div class="row valign-wrapper">
+                    <div id="fianlsP1Confrence" class="col s4 flow-text">
+                      <img id="finalsD1ImageConfrence" src="https://i.postimg.cc/bG441fg3/avatar-1.png" alt="" class="circle responsive-img">
+                      <font id="finalsManager1Confrence" class=""> (2) Prasun </font>
+                      <div class="chip"> 10-3 </div>
+                      <!-- notice the "circle" class -->
+                      <div class="red-text">
+                        <font id="finalsP1Score">123.40</font> <i id="finalsP1EmojiConfrence" class="em"></i>
+                      </div>
+                    </div>
+                    <div class="col s3 flow-text">
+                      <span class="red-text">
+                        vs
+                      </span>
+                    </div>
+
+                    <div id="finalsP2Confrence" class="col s4 flow-text">
+                      <img id="finalsD2ImageConfrence" src="https://i.postimg.cc/7G7dVtQD/avatar-2.png" alt="" class="circle responsive-img">
+                      <font id="finalsManager2" class="">(6) Suraj </font>
+                      <div class="chip">7 - 6</div> <!-- notice the "circle" class -->
+                      <div class="red-text">
+                        <font id="finalsP2Score">104.24</font><i id="finalsP2EmojiConfrence" class="em"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row 1-->
+            <h1 class="red-text">Third Place</h1>
+            <!-- charts start div -->
+            <div class="row">
+              <div class="col s12 m12 l12">
+                <div class="card-panel grey lighten-5 z-depth-1">
+                  <div class="row valign-wrapper">
+                    <div id="fianlsP1Confrence" class="col s4 flow-text">
+                      <img id="thirdPlaceD1ImageConfrence" src="https://i.postimg.cc/xcg7tzgk/avatar-7.png" alt=""
+                        class="circle responsive-img">
+                      <font id="thirdPlaceManager1Confrence" class=""> ED </font>
+                      <div class="chip"> 12-1 </div>
+                      <!-- notice the "circle" class -->
+                      <div class="red-text">
+                        <font id="fianlsP1Score">106.16</font> <i id="thirdPlaceP1EmojiConfrence" class="em"></i>
+                      </div>
+                    </div>
+                    <div class="col s3 flow-text">
+                      <span class="red-text">
+                        vs
+                      </span>
+                    </div>
+
+                    <div id="thirdPlaceP2Confrence" class="col s4 flow-text">
+                      <img id="thirdPlaceD2Image" src="https://i.postimg.cc/R6cpf6NZ/avatar-10.gif" alt="" class="circle responsive-img">
+                      <font id="thirdPlaceManager2" class=""> Siroo Dai </font>
+                      <div class="chip">7 - 6</div> <!-- notice the "circle" class -->
+                      <div class="red-text">
+                        <font id="thirdPlaceP2Score">133.34</font><i id="thirdPlaceP2EmojiConfrence" class="em"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- row 1-->
+
+            <div class="section center">
+              <blockquote class="center">
+                <h1 class="red-text">Confrencerence Finals </h1>
+                <h4 class="red-text">12/13 to 12/17 </h4>
+              </blockquote>
+
+              <div class="row">
+
+
+
+
+
+                <div class="row">
+                  <div class="col s12 m12 l12">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div id="P1Confrence" class="col s4 flow-text">
+                          <img id="D1ImageConfrence" src="https://i.postimg.cc/xcg7tzgk/avatar-7.png" alt="" class="circle responsive-img">
+                          <font id="Manager1Confrence" class="">(1) ED </font>
+                          <div class="chip">12-1 </div>
+                          <div class="red-text">
+                            <font id="d1ScoreRound2">64.16</font> <i id="P1EmojiConfrence" class="em"></i>
+                          </div>
+                          <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s3 flow-text">
+                          <span class="red-text">
+                            vs
+                          </span>
+                        </div>
+                        <div id="P4Confrence" class="col s4 flow-text">
+                          <img id="D4ImageConfrence" src="https://i.postimg.cc/7G7dVtQD/avatar-2.png" alt="" class="circle responsive-img">
+                          <font id="Manager4Confrence" class="">(6) Suraj </font>
+                          <div class="chip">7 - 6</div> <!-- notice the "circle" class -->
+                          <div class="red-text">
+                            <font id="d4ScoreRound2"">97.84</font><i id=" P4EmojiConfrence" class="em"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- row 1-->
+
+                <!-- charts start div -->
+                <div class="row">
+                  <div class="col s12 m12 l12">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div id="P2Confrence" class="col s4 flow-text">
+                          <img id="D2ImageConfrence" src="https://i.postimg.cc/bG441fg3/avatar-1.png" alt="" class="circle responsive-img">
+                          <font id="Manager2Confrence" class=""> (2) Prasun </font>
+                          <div class="chip"> 10-3 </div>
+                          <!-- notice the "circle" class -->
+                          <div class="red-text">
+                            <font id="d2ScoreRound2">104.60</font> <i id="P2EmojiConfrence" class="em"></i>
+                          </div>
+                        </div>
+                        <div class="col s3 flow-text">
+                          <span class="red-text">
+                            vs
+                          </span>
+                        </div>
+
+                        <div id="P3Confrence" class="col s4 flow-text">
+                          <img id="D3ImageConfrence" src="https://i.postimg.cc/R6cpf6NZ/avatar-10.gif" alt="" class="circle responsive-img">
+                          <font id="Manager3Confrence" class=""> (4) Siroo Dai <font>
+                              <div class="chip">7 - 6 </div> <!-- notice the "circle" class -->
+                              <div class="red-text">
+                                <font id="d3ScoreRound2">80.02</font><i id="P3EmojiConfrence" class="em"></i>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- row 1-->
+
+
+
+
+
+
+
+                <blockquote class="center">
+                  <h1 class="red-text">Divisional Round 2018 </h1>
+                  <h4 class="red-text">12/7 to 12/10 </h4>
+                </blockquote>
+                <!-- charts start div -->
+                <div class="row">
+
+                  <div class="row">
+                    <div class="col s12 m12 l12">
+                      <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                          <div id="P1" class="col s4 flow-text">
+                            <img id="D1Image" src="https://i.postimg.cc/xcg7tzgk/avatar-7.png" alt="" class="circle responsive-img">
+                            <font id="P1Name">(1) ED </font>
+                            <div class="chip">12-1 </div>
+                            <div class="red-text">
+                              <font id="D1Score">140.30</font> <i id="P1Emoji" class="em"></i>
+                            </div>
+                            <!-- notice the "circle" class -->
+                          </div>
+                          <div class="col s3 flow-text">
+                            <span class="red-text">
+                              vs
+                            </span>
+                          </div>
+                          <div id="P8" class="col s4 flow-text">
+                            <img id="D8Image" src="https://i.postimg.cc/H8gKP0fM/avatar-3.png" alt="" class="circle responsive-img">
+                            <font id="P8Name">(8) Rajiv </font>
+                            <div class="chip">6 - 7</div> <!-- notice the "circle" class -->
+                            <div class="red-text">
+                              <font id="D8Score">98.60</font><i id="P8Emoji" class="em"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- row 1-->
+
+
+
+
+                  <div class="row">
+                    <div class="col s12 m12 l12">
+                      <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                          <div id="P2" class="col s4 flow-text">
+                            <img id="D2Image" src="https://i.postimg.cc/bG441fg3/avatar-1.png" alt="" class="circle responsive-img">
+                            <font id="P2Name"> (2) Prasun </font>
+                            <div class="chip"> 10-3 </div>
+                            <!-- notice the "circle" class -->
+                            <div class="red-text">
+                              <font id="D2Score">99.38</font> <i id="P2Emoji" class="em"></i>
+                            </div>
+                          </div>
+                          <div class="col s3 flow-text">
+                            <span class="red-text">
+                              vs
+                            </span>
+                          </div>
+
+                          <div id="P7" class="col s4 flow-text">
+                            <img id="D7Image" src="https://i.postimg.cc/62s1yL6P/avatar-13.gif" alt="" class="circle responsive-img">
+                            <font id="P7Name">(7) Sanjay Dai </font>
+                            <div class="chip">7 - 6 </div> <!-- notice the "circle" class -->
+                            <div class="red-text">
+                              <font id="D7Score">65.30</font><i id="P7Emoji" class="em"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- row 1-->
+
+
+
+                    <div class="row">
+                      <div class="col s12 m12 l12">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                          <div class="row valign-wrapper">
+                            <div id="P3" class="col s4 flow-text">
+                              <img id="D3Image" src="https://i.postimg.cc/870YVg2N/avatar-11.gif" alt="" class="circle responsive-img">
+                              <font id="P3Name"> (3) Ayush </font>
+                              <div class="chip"> 9-4 </div>
+                              <!-- notice the "circle" class -->
+                              <div class="red-text">
+                                <font id="D3Score">56.24</font>
+                              </div>
+                              <i id="P3Emoji" class="em"></i>
+                            </div>
+                            <div class="col s3 flow-text">
+                              <span class="red-text">
+                                vs
+                              </span>
+                            </div>
+                            <div id="P6" class="col s4 flow-text">
+                              <img id="D6Image" src="https://i.postimg.cc/7G7dVtQD/avatar-2.png" alt="" class="circle responsive-img">
+                              <font id="P4Name"> (4) Suraj </font>
+                              <div class="chip">7 - 6 </div> <!-- notice the "circle" class -->
+                              <!-- notice the "circle" class -->
+                              <div class="red-text">
+                                <font id="D6Score">97.50</font>
+                              </div>
+                              <i id="P6Emoji" class="em"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- row 1-->
+
+                    <!-- charts start div -->
+                    <div class="row">
+                      <div class="col s12 m12 l12">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                          <div class="row valign-wrapper">
+                            <div id="P4" class="col s4 flow-text">
+                              <img id="D4Image" src="https://i.postimg.cc/R6cpf6NZ/avatar-10.gif" alt="" class="circle responsive-img">
+                              <font id="P4Name"> (4) Siroo Dai </font>
+                              <div class="chip"> 8-4 </div>
+                              <!-- notice the "circle" class -->
+                              <div class="red-text">
+                                <font id="D4Score">105.18</font>
+                              </div>
+
+                              <i id="P4Emoji" class="em"></i>
+                            </div>
+                            <div class="col s3 flow-text">
+                              <span class="red-text">
+                                vs
+                              </span>
+                            </div>
+
+                            <div id="P5" class="col s4 flow-text">
+                              <img id="D5Image" src="https://i.postimg.cc/DW4MvYhs/avatar-12.gif" alt="" class="circle responsive-img">
+                              <font id="P5Name"> (5) Ishan </font>
+                              <div class="chip"> 7 - 6 </div> <!-- notice the "circle" class -->
+                              <div class="red-text">
+                                <font id="D5Score">71.20</font>
+                              </div>
+
+                              <i id="P5Emoji" class="em"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- row 1-->
+
+                    <!-- charts start div -->
+                    <div class="row">
+                      <div class="col s12 m12 l12">
+                        <div class="card" id="containerforAlltheProblems"></div>
+                      </div>
+                    </div><!-- row 1-->
+                    <div class="row card">
+                      <div class="col s12 m6 l6">
+                        <table id="Managers" class="highlight">
+                          <!-- The Row Number 0 -->
+                          <thead class="divider card blue white-text text-accent-1 z-depth-1" style="text-transform: uppercase;text-decoration-line: underline;">
+
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="red-text"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col s12 m6 l6">
+                        <div class="card" id="containerForWeeklyShare"></div>
+                        <div class="card" id="weeklyWinners"></div>
+                      </div>
+                    </div><!-- row  2-->
+                    <div class="fixed-action-btn">
+                      <a class="btn-floating btn-large red">
+                        <i class="large material-icons">mode_edit</i>
+                      </a>
+                      <ul>
+                        <li><a href="https://football.fantasysports.yahoo.com/f1/1063532" class="btn-floating purple"
+                            target="_blank"><i class="fab fa-yahoo"></i></a></li>
+                        <li><a href="https://www.facebook.com/groups/464098240290567/" class="btn-floating blue" target="_blank"><i
+                              class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.google.com/search?q=football+news&rlz=1C1CHBF_enUS810US810&oq=football+news&aqs=chrome..69i57j69i60j0l4.5367j1j7&sourceid=chrome&ie=UTF-8"
+                            class="btn-floating blue red yellow" target="_blank"><i class="fab fa-google"></i></a></li>
+                      </ul>
+                    </div>
+                  </div> <!-- main row-->
+  </main>
+  <footer class="page-footer light-blue lighten-1">
+
+    <div class="footer-copyright">
+      <div class="container">
+
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script> <a class="grey-text text-lighten-2" target="_blank">Avishek Uprety</a> No rights reserved. Design
+        and Developed for Nepal Fantasy Football</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highcharts/6.1.2/highcharts.js'></script>
+<script src='https://code.highcharts.com/highcharts-more.js'></script>
+<script src='https://code.highcharts.com/modules/drilldown.js'></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+
+<script src="js/index.js"></script>
+
+<script>
+  var dataSet = [
+    ["Ed", "5", "1", "2"],
+    ["Siroo Dai", "6", "0", "1"],
+    ["Asis Dai", "4", "2", "5"],
+    ["Bhai", "4", "2", "4"],
+    ["Prasun", "5", "1", "3"],
+    ["Sanjay Dai", "3", "3", "7"],
+    ["Rajiv", "2", "4", "8"],
+    ["Subash", "2", "4", "10"],
+    ["Ashish", "1", "5", "14"],
+    ["Suraj", "3", "3", "6"],
+    ["Ishan", "2", "4", "9"],
+    ["Punchbag", "1", "5", "13"],
+    ["Subin", "2", "4", "12"],
+    ["Cool Deep", "2", "4", "11"]
+  ]
+  table = document.getElementById("Managers");
+
+  $(document).ready(function () {
+    $('#Managers').DataTable({
+      "order": [
+        [3, "asc"]
+      ],
+      "searching": false,
+      "lengthChange": false,
+      "info": false,
+      "bPaginate": false,
+      "bAutoWidth": false,
+      data: dataSet,
+      columns: [{
+        title: "Managers"
+      },
+      {
+        title: "Wins"
+      },
+      {
+        title: "Losses"
+      },
+      {
+        title: "Rank"
+      }
+      ]
+    });
+  });
+</script>
+
+
+</html>

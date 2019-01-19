@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasy Scoring Charts and Cards with Materialize and High Charts</title>
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+       .tabs .tab a:hover,.tabs .tab a.active {
+            background-color:#f6b2b5;
+            color: white;
+            -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <!--  <div class="col s6" id="containerforAlltheProblems">
+ -->
+    <html>
+
+
+    <body>
+        <header>
+            <div class="navbar-fixed">
+
+                <nav class="blue darken-2">
+                    <div class="container">
+                        <div class="nav-wrapper fixed light-blue lighten-1">
+                            <a href="index.html" class="brand-logo center ">Nepal Fantasy Football <script type="text/javascript">
+                                    document.write(new Date().getFullYear());
+                                </script></a>
+                            <a href="#" data-activates="side-nav" class="button-collapse show-on-med left">
+                                <i class="material-icons">menu</i>
+                            </a>
+
+                            <ul class="right hide-on-med-and-down">
+                                <li class="active"><a href="ScheduleandStandings.html">Schedule & Standings</a></li>
+                                <li> <a href="index.html">Fantasy Shenanigans!</a></li>
+                              </ul>
+
+
+
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="row">
+          
+
+            <div class="col s12 m12 l12">
+                <!-- Note that "m8 l9" was added -->
+                <!-- Teal page content
+
+              This content will be:
+          9-columns-wide on large screens,class="display"
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+
+
+                <main>
+                    <div class="row">
+                        <div class="col s12 m12 card z-depth-3">
+                            <div class="card-content">
+                                <span class="card-title activator yellow-text text-darken-4" id="standings">Standings<i
+                                        class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                              
+                                <div class="row">
+
+                                    <div class="col s6 m6 l6">
+                                           <span class="card-title grey-text text-darken-4">AFC Standings</span>   
+                                           <ul class="tabs">
+                                                <li class="tab col s2"><a href="#test1">Afc East</a></li>
+                                                <li class="tab col s2"><a class="active" href="#test2">Afc West</a></li>
+                                                <li class="tab col s2 "><a href="#test3">Afc North</a></li>
+                                                <li class="tab col s2"><a href="#test4">Afc South</a></li>
+                                            </ul> 
+                                           
+                                           <table id="test1" class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Team</th>
+                                                            <th>Wins</th>
+                                                            <th>Losses</th>
+                                                            <th>Ties</th>
+                                                        </tr>
+                                                    </thead>
+        
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/mia.png&amp;h=60">
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/ne.png&amp;h=60">
+                                                            </td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/nyj.png&amp;h=60">
+                                                            </td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/buf.png&amp;h=60">
+                                                            </td>
+                                                            <td>0</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            
+                                                <table id="test2"  class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Team</th>
+                                                            <th>Wins</th>
+                                                            <th>Losses</th>
+                                                            <th>Ties</th>
+                                                        </tr>
+                                                    </thead>
+        
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/kc.png&amp;h=60"></td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/den.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/lac.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/oak.png&amp;h=60"></td>
+                                                            <td>0</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+        
+                                           
+                                                <table id="test3"  class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Team</th>
+                                                            <th>Wins</th>
+                                                            <th>Losses</th>
+                                                            <th>Ties</th>
+                                                        </tr>
+                                                    </thead>
+        
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/cin.png&amp;h=60"></td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/cle.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/bal.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/pit.png&amp;h=60"></td>
+                                                            <td>0</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                           
+                                                <table id="test4"  class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Team</th>
+                                                            <th>Wins</th>
+                                                            <th>Losses</th>
+                                                            <th>Ties</th>
+                                                        </tr>
+                                                    </thead>
+        
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/jax.png&amp;h=60"></td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/ten.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/ind.png&amp;h=60"></td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/hou.png&amp;h=60"></td>
+                                                            <td>0</td>
+                                                            <td>2</td>
+                                                            <td>0</td>
+        
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+        
+
+                                    </div>
+
+                                    <div class="col s6 m6 l6">
+                                            
+                                        <span class="card-title grey-text text-darken-4">NFC Standings<i class="material-icons right">close</i></span>
+                                        <ul class="tabs">
+                                                <li class="tab col s3"><a href="#test5">Nfc East</a></li>
+                                                <li class="tab col s3"><a class="active" href="#test6">Nfc West</a></li>
+                                                <li class="tab col s3 "><a href="#test7">Nfc North</a></li>
+                                                <li class="tab col s3"><a href="#test8">Nfc South</a></li>
+                                            </ul> 
+                                        <table id="test5"  class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>Wins</th>
+                                                    <th>Losses</th>
+                                                    <th>Ties</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/dal.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/Wsh.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/phi.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/nyg.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                   
+                                  
+                                        <table id="test6"  class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>Wins</th>
+                                                    <th>Losses</th>
+                                                    <th>Ties</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/lar.png&amp;h=60"></td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/sf.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/Sea.png&amp;h=60"></td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/ari.png&amp;h=60"></td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                   
+                                        <table id="test7"  class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>Wins</th>
+                                                    <th>Losses</th>
+                                                    <th>Ties</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/gb.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/min.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/chi.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/det.png&amp;h=60"></td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                              
+                                        <table id="test8"  class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>Wins</th>
+                                                    <th>Losses</th>
+                                                    <th>Ties</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/tb.png&amp;h=60"></td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/atl.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/car.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/no.png&amp;h=60"></td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                         </table>
+                                    </div>
+                                    
+                                   
+                                </div>
+                            </div>
+                            <div class="card-content blue-text" id="NFL">
+                                <span class="card-title center-align blue-text">Schedule Week 3</span>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">
+                                    <h5>Thursday</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="thursdayAway"></td>
+                                                <td class="thursdayHome"></td>
+                                                <td>6:20 PM</td>
+                                                <td>NFL</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="col s4">
+                                    <h5>Sunday Night</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="sundayNightAway"></td>
+                                                <td class="sundayNightHome"></td>
+                                                <td>6:20 PM</td>
+                                                <td>NBC</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+
+
+                                </div>
+                                <div class="col s4">
+                                    <h5>Monday Night</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="mondayNightAway"></td>
+                                                <td class="mondayNightHome"></td>
+                                                <td>6:20 PM</td>
+                                                <td>ESPN</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+                                </div>
+                                <div class="col s6">
+                                    <h5>Sunday FOX Games</h5>
+
+                                    <table class="morningFox">
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame1Away"></td>
+                                                <td class="foxSundayMorningGame1Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="morningFox">
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame2Away"></td>
+                                                <td class="foxSundayMorningGame2Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                    <table class="morningFox">
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame3Away"></td>
+                                                <td class="foxSundayMorningGame3Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame4Away"></td>
+                                                <td class="foxSundayMorningGame4Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame5Away"></td>
+                                                <td class="foxSundayMorningGame5Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td class="foxSundayMorningGame6Away"></td>
+                                                <td class="foxSundayMorningGame6Home"></td>
+                                                <td class="afternoon"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="foxSundayMorningGame7Away"></td>
+                                                <td class="foxSundayMorningGame7Home"></td>
+                                                <td class="afternoon"></td>
+                                                <td>FOX</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="col s6">
+                                    <h5>Sunday CBS Games</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame1Away"></td>
+                                                <td class="cbsSundayMorningGame1Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame2Away"></td>
+                                                <td class="cbsSundayMorningGame2Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame3Away"></td>
+                                                <td class="cbsSundayMorningGame3Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame4Away"></td>
+                                                <td class="cbsSundayMorningGame4Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame5Away"></td>
+                                                <td class="cbsSundayMorningGame5Home"></td>
+                                                <td class="mornings"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><span>matchup</span></th>
+                                                <th></th>
+                                                <th><span>time&nbsp;</span><span data-behavior="date_timezone">
+                                                        (MT)</span></th>
+                                                <th><span>nat tv</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cbsSundayMorningGame6Away"></td>
+                                                <td class="cbsSundayMorningGame6Home"></td>
+                                                <td class="afternoon"></td>
+                                                <td>CBS</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th><span>Bye's</span></th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                None of the teams have a bye this week
+                                            </td>
+                                            <td>
+
+                                            </td>
+
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+        </div>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li><a href="https://football.fantasysports.yahoo.com/f1/1063532" class="btn-floating purple" target="_blank"><i
+                            class="fab fa-yahoo"></i></a></li>
+                <li><a href="https://www.facebook.com/groups/464098240290567/" class="btn-floating blue" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.google.com/search?q=football+news&rlz=1C1CHBF_enUS810US810&oq=football+news&aqs=chrome..69i57j69i60j0l4.5367j1j7&sourceid=chrome&ie=UTF-8"
+                        class="btn-floating blue red yellow" target="_blank"><i class="fab fa-google"></i></a></li>
+            </ul>
+        </div>
+
+        </div>
+
+        </main>
+
+        </div>
+
+        </div>
+
+
+
+
+
+        <footer class="page-footer light-blue lighten-1 ">
+            <div class="footer-copyright">
+                <div class="row grey-text text-lighten-2 center-align">
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Avishek Uprety No rights reserved. Design
+                    and Developed for Nepal Fantasy Football
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    </html>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+
+    <script src="js/index.js"></script>
+    <script>
+        
+        var morningdate = new Date('6/29/2011 5:00:00 PM UTC');
+        var convertedDate = morningdate.toString()
+        dateString = convertedDate.slice(15, 21);
+        $(".mornings").html(dateString + 'AM');
+        //or just do this
+        $(".afternoon").html('2:15 PM');
+        var imagSrcText = "<img src='http://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/"
+        var imageRest = ".png&h=50' alt='no image found'>"
+        var jets = 'nyj';
+        var brow = 'cle';
+        var pats = 'ne';
+        var lion = 'det';
+        var stel = 'pit';
+        var bucs = 'tb';
+        var pack = 'gb';
+        var reds = 'Wsh';
+        var sain = 'no';
+        var falc = 'atl';
+        var viks = 'min';
+        var rams = 'lar';
+        var char = 'lac';
+        var eagl = 'phi';
+        var jagu = 'jax';
+        var tita = 'ten';
+        var texa = 'hou';
+        var cowb = 'dal';
+        var gian = 'nyg';
+        var fner = 'sf';
+        var seah = 'sea';
+        var bron = 'den';
+        var chie = 'kc';
+        var bear = 'chi';
+        var bill = 'buf';
+        var dolp = 'mia';
+        var pant = 'car';
+        var card = 'ari';
+        var raid = 'oak';
+        var beng = 'cin';
+        var rave = 'bal';
+        var colt = 'ind';
+        // fox, cbs, prime, nfl network
+        var thursdayAway = viks;
+        var thursdayHome = rams;
+        //nbc
+        var sundayNightAway = rave;
+        var sundayNightHome = stel;
+        // espn
+        var mondayNightAway = chie;
+        var mondayNightHome = bron;
+        //fox games
+        var foxSundayMorningGame1Away = pack;
+        var foxSundayMorningGame1Home = reds;
+        var foxSundayMorningGame2Away = falc;
+        var foxSundayMorningGame2Home = sain;
+        var foxSundayMorningGame3Away = colt;
+        var foxSundayMorningGame3Home = eagl;
+        var foxSundayMorningGame4Away = gian;
+        var foxSundayMorningGame4Home = texa;
+        var foxSundayMorningGame5Away = colt;
+        var foxSundayMorningGame5Home = eagl;
+        // cbs games
+        var cbsSundayMorningGame1Away = bron;
+        var cbsSundayMorningGame1Home = rave;
+        var cbsSundayMorningGame2Away = bill;
+        var cbsSundayMorningGame2Home = viks;
+        var cbsSundayMorningGame3Away = beng;
+        var cbsSundayMorningGame3Home = pant;
+        var cbsSundayMorningGame4Away = raid;
+        var cbsSundayMorningGame4Home = dolp;
+        var cbsSundayMorningGame5Away = tita;
+        var cbsSundayMorningGame5Home = jagu;
+        //after noon games
+        var foxSundayMorningGame6Home = cowb;
+        var foxSundayMorningGame6Away = seah;
+        var foxSundayMorningGame7Home = bear;
+        var foxSundayMorningGame7Away = card;
+        var cbsSundayMorningGame6Away = char;
+        var cbsSundayMorningGame6Home = rams;
+
+        $(document).ready(function () {
+
+            $('.thursdayAway').html(imagSrcText + thursdayAway + imageRest);
+            $('.thursdayHome').html(imagSrcText + thursdayHome + imageRest);
+            $('.sundayNightAway').html(imagSrcText + sundayNightAway + imageRest);
+            $('.sundayNightHome').html(imagSrcText + sundayNightHome + imageRest);
+            $('.mondayNightAway').html(imagSrcText + mondayNightAway + imageRest);
+            $('.mondayNightHome').html(imagSrcText + mondayNightHome + imageRest);
+            $('.foxSundayMorningGame1Home').html(imagSrcText + foxSundayMorningGame1Home + imageRest);
+            $('.foxSundayMorningGame1Away').html(imagSrcText + foxSundayMorningGame1Away + imageRest);
+            $('.foxSundayMorningGame2Home').html(imagSrcText + foxSundayMorningGame2Home + imageRest);
+            $('.foxSundayMorningGame2Away').html(imagSrcText + foxSundayMorningGame2Away + imageRest);
+            $('.foxSundayMorningGame3Home').html(imagSrcText + foxSundayMorningGame3Home + imageRest);
+            $('.foxSundayMorningGame3Away').html(imagSrcText + foxSundayMorningGame3Away + imageRest);
+            $('.foxSundayMorningGame4Home').html(imagSrcText + foxSundayMorningGame4Home + imageRest);
+            $('.foxSundayMorningGame4Away').html(imagSrcText + foxSundayMorningGame4Away + imageRest);
+            $('.foxSundayMorningGame5Home').html(imagSrcText + foxSundayMorningGame5Home + imageRest);
+            $('.foxSundayMorningGame5Away').html(imagSrcText + foxSundayMorningGame5Away + imageRest);
+            $('.foxSundayMorningGame6Home').html(imagSrcText + foxSundayMorningGame6Home + imageRest);
+            $('.foxSundayMorningGame6Away').html(imagSrcText + foxSundayMorningGame6Away + imageRest);
+            $('.foxSundayMorningGame7Home').html(imagSrcText + foxSundayMorningGame7Home + imageRest);
+            $('.foxSundayMorningGame7Away').html(imagSrcText + foxSundayMorningGame7Away + imageRest);
+
+            $('.cbsSundayMorningGame1Home').html(imagSrcText + cbsSundayMorningGame1Home + imageRest);
+            $('.cbsSundayMorningGame1Away').html(imagSrcText + cbsSundayMorningGame1Away + imageRest);
+            $('.cbsSundayMorningGame2Home').html(imagSrcText + cbsSundayMorningGame2Home + imageRest);
+            $('.cbsSundayMorningGame2Away').html(imagSrcText + cbsSundayMorningGame2Away + imageRest);
+            $('.cbsSundayMorningGame3Home').html(imagSrcText + cbsSundayMorningGame3Home + imageRest);
+            $('.cbsSundayMorningGame3Away').html(imagSrcText + cbsSundayMorningGame3Away + imageRest);
+            $('.cbsSundayMorningGame4Away').html(imagSrcText + cbsSundayMorningGame4Away + imageRest);
+            $('.cbsSundayMorningGame4Home').html(imagSrcText + cbsSundayMorningGame4Home + imageRest);
+            $('.cbsSundayMorningGame5Home').html(imagSrcText + cbsSundayMorningGame5Home + imageRest);
+            $('.cbsSundayMorningGame5Away').html(imagSrcText + cbsSundayMorningGame5Away + imageRest);
+            $('.cbsSundayMorningGame6Home').html(imagSrcText + cbsSundayMorningGame6Home + imageRest);
+            $('.cbsSundayMorningGame6Away').html(imagSrcText + cbsSundayMorningGame6Away + imageRest);
+
+
+
+
+
+
+
+        });
+
+        
+     
+    </script>
+
+
+
+
+</body>
+
+</html>
